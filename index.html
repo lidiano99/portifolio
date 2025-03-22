@@ -1,0 +1,104 @@
+html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio lidiano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+
+            <li>
+                <a href="#inicio" class="menu-link">inicio</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">projetos</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">sobre</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabeçalho">
+        <div>
+            <img src="./img/lidiano.png" alt="" class="foto-perfil">
+            <h1>Olá, eu sou Lidiano</h1>
+            <p class="cabeçalho-sub-titulo">Desenvolvedor Front-End</p>
+        </div>
+    </main>
+    <section id="sobre" class="sobre">
+        <div class="sobre-caixa">
+            <h2 class="sobre-titulo">Sobre mim</h2>
+            <p class="sobre-paragrafo">Olá, eu sou Lidiano, desenvolvedor front-end, apaixonado por tecnologia e
+                programação. Atualmente estou
+                estudando para me tornar um desenvolvedor front-end </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulos">meus projetos </h2>
+        <div class="projeto-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/conversor de moedas.png" alt="" class="projeto-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projeto-info">conversor de moedas</h3>
+                    <p class="paragrafo-projetos"> um projeto de converção de moedas com tecnologia
+                        HTML:5,CSS,javscript. </p>
+                </div>
+
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/mario.png" alt="" class="projeto-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projeto-info">projeto treinamento</h3>
+                    <p class="paragrafo-projetos"> um projeto de treinamento com tecnologia HTML:5,CSS. </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit=eviarwhats(event)>
+            <div class="grupo-form">
+                <input placeholder="nome" class="campo-form" id="nome">
+            </div>
+<div>
+    <textarea class="campo-form" placeholder="digite sua mensagem" rows="4" id="mensagem"></textarea>
+</div>
+<br>
+<button type="submit" class="botao-form">Enviar whatsApp </button>
+        </form>
+
+    </section>
+<script>
+function eviarwhats(event){
+event.preventDefault()
+const nome = document.getElementById('nome').value;
+const mensagem = document.getElementById('mensagem').value;
+const telefone = '5583986719482'
+
+const texto = `Olá, meu nome é ${nome}, ${mensagem}`
+const msgformatada = encodeURIComponent(texto)
+
+const url = `https://wa.me/${telefone}?text=${msgformatada}`;
+
+window.open(url, '_blank')
+}
+</script>
+    </main>
+</body>
+
+</html> 

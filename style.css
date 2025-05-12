@@ -286,7 +286,41 @@ h1 {
     radial-gradient(circle at 50% 80%, rgba(79, 70, 229, 0.5) 0%, transparent 20%),
     var(--escuro);
     animation: cascata 3s infinite;
+
 }
+ .rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: 50px;
+ }
+ .redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top:20px
+ }
+.redes-sociais img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(2px 2px 2px rgb(255, 255, 255));
+    transition: all 0.3s ease;
+}
+.redes-sociais img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(4px 4px 4px rgba(47, 173, 75, 0.5));
+}
+
+
+
+
+
+
+
+
+
 @keyframes flutuar {
 
 0%, 100% {
@@ -306,12 +340,14 @@ h1 {
 }
 @media (max-width: 768px) {
     .menu {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 5rem;
     }
 
     .cabeçalho h1 {
         font-size: 2.5rem;
+        margin-left: 3rem;
+
     }
 
     .cabeçalho-sub-titulo {
@@ -350,11 +386,12 @@ h1 {
 
 @media (max-width: 480px) {
     .menu {
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .cabeçalho h1 {
         font-size: 2rem;
+        margin-left: 3rem;
     }
 
     .cabeçalho-sub-titulo {
